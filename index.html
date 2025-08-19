@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshKicks - Dịch vụ làm sạch giày chuyên nghiệp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #00dbde, #fc00ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 219, 222, 0.3);
+        }
+
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+<!-- Header & Navigation -->
+<header class="sticky top-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-gray-800">
+    <div class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+                <span class="logo-text text-2xl ml-3 gradient-text">FreshKicks</span>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-cyan-400 transition-all">Trang chủ</a>
+                <a href="#services" class="hover:text-cyan-400 transition-all">Dịch vụ</a>
+                <a href="#process" class="hover:text-cyan-400 transition-all">Quy trình</a>
+                <a href="#about" class="hover:text-cyan-400 transition-all">Về chúng tôi</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-all">Liên hệ</a>
+            </nav>
+
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+            <a href="#home" class="block py-2 hover:text-cyan-400 transition-all">Trang chủ</a>
+            <a href="#services" class="block py-2 hover:text-cyan-400 transition-all">Dịch vụ</a>
+            <a href="#process" class="block py-2 hover:text-cyan-400 transition-all">Quy trình</a>
+            <a href="#about" class="block py-2 hover:text-cyan-400 transition-all">Về chúng tôi</a>
+            <a href="#contact" class="block py-2 hover:text-cyan-400 transition-all">Liên hệ</a>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="py-20 md:py-32 bg-gradient-to-b from-black to-gray-900">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Làm sạch giày</span><br>
+                    Chuyên nghiệp nhất
+                </h1>
+                <p class="text-xl text-gray-300 mb-8">
+                    Đôi giày của bạn sẽ trông như mới với dịch vụ làm sạch chuyên nghiệp của chúng tôi.
+                    Chúng tôi sử dụng công nghệ và chất tẩy rửa cao cấp để mang lại vẻ ngoài hoàn hảo.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-full font-bold hover:opacity-90 transition-all">
+                        Đặt lịch ngay
+                    </a>
+                    <a href="#services" class="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-full font-bold hover:bg-cyan-400 hover:text-black transition-all">
+                        Xem dịch vụ
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-80 h-80 md:w-96 md:h-96 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full opacity-20 absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                    <img src="https://images.unsplash.com/photo-1600269452121-1f82294359ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                         alt="Shoe cleaning service"
+                         class="rounded-xl shadow-2xl w-full max-w-md border border-gray-700">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Dịch vụ của chúng tôi</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-cyan-500 to-purple-600 mx-auto mb-6"></div>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                Chúng tôi cung cấp các dịch vụ làm sạch giày toàn diện để đáp ứng mọi nhu cầu của bạn.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="service-card bg-gray-800 rounded-xl p-8 transition-all hover:border-cyan-400 border border-gray-700">
+                <div class="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-broom text-2xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Làm sạch cơ bản</h3>
+                <p class="text-gray-300 mb-6">
+                    Dịch vụ làm sạch toàn bộ giày bao gồm đế, thân giày và dây giày.
+                    Loại bỏ bụi bẩn và vết bẩn thông thường.
+                </p>
+                <div class="text-cyan-400 font-bold text-xl">250.000đ - 400.000đ</div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card bg-gray-800 rounded-xl p-8 transition-all hover:border-purple-500 border border-gray-700">
+                <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-spray-can text-2xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Làm sạch sâu</h3>
+                <p class="text-gray-300 mb-6">
+                    Làm sạch chuyên sâu với chất tẩy rửa cao cấp, xử lý các vết bẩn cứng đầu
+                    và khử mùi hiệu quả.
+                </p>
+                <div class="text-purple-400 font-bold text-xl">400.000đ - 600.000đ</div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card bg-gray-800 rounded-xl p-8 transition-all hover:border-pink-500 border border-gray-700">
+                <div class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-star text-2xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Dịch vụ cao cấp</h3>
+                <p class="text-gray-300 mb-6">
+                    Gói dịch vụ cao cấp bao gồm làm sạch sâu, bảo dưỡng da, đánh bóng và
+                    bảo vệ giày với lớp phủ chống thấm.
+                </p>
+                <div class="text-pink-400 font-bold text-xl">600.000đ - 1.000.000đ</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section id="process" class="py-20 bg-black">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Quy trình làm sạch</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-cyan-500 to-purple-600 mx-auto mb-6"></div>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                Chúng tôi tuân thủ quy trình làm sạch nghiêm ngặt để đảm bảo chất lượng tốt nhất cho đôi giày của bạn.
+            </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+            <!-- Step 1 -->
+            <div class="flex flex-col items-center text-center max-w-xs">
+                <div class="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center text-3xl font-bold mb-4">1</div>
+                <h3 class="text-xl font-bold mb-2">Tiếp nhận</h3>
+                <p class="text-gray-300">
+                    Kiểm tra tình trạng giày và tư vấn dịch vụ phù hợp
+                </p>
+            </div>
+
+            <!-- Arrow -->
+            <div class="hidden md:block">
+                <i class="fas fa-arrow-right text-2xl text-cyan-400"></i>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flex flex-col items-center text-center max-w-xs">
+                <div class="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center text-3xl font-bold mb-4">2</div>
+                <h3 class="text-xl font-bold mb-2">Làm sạch</h3>
+                <p class="text-gray-300">
+                    Sử dụng công nghệ và hóa chất chuyên dụng để làm sạch
+                </p>
+            </div>
+
+            <!-- Arrow -->
+            <div class="hidden md:block">
+                <i class="fas fa-arrow-right text-2xl text-cyan-400"></i>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex flex-col items-center text-center max-w-xs">
+                <div class="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center text-3xl font-bold mb-4">3</div>
+                <h3 class="text-xl font-bold mb-2">Bảo dưỡng</h3>
+                <p class="text-gray-300">
+                    Bảo dưỡng chất liệu và xử lý các vấn đề cụ thể
+                </p>
+            </div>
+
+            <!-- Arrow -->
+            <div class="hidden md:block">
+                <i class="fas fa-arrow-right text-2xl text-cyan-400"></i>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="flex flex-col items-center text-center max-w-xs">
+                <div class="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center text-3xl font-bold mb-4">4</div>
+                <h3 class="text-xl font-bold mb-2">Hoàn thành</h3>
+                <p class="text-gray-300">
+                    Kiểm tra chất lượng và giao lại giày cho khách hàng
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Khách hàng nói gì</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-cyan-500 to-purple-600 mx-auto mb-6"></div>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                Hàng nghìn khách hàng đã tin tưởng sử dụng dịch vụ của chúng tôi
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center text-white font-bold mr-4">
+                        TN
+                    </div>
+                    <div>
+                        <h4 class="font-bold">Trần Ngọc</h4>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-300">
+                    "Đôi giày của tôi trông như mới sau khi sử dụng dịch vụ làm sạch sâu.
+                    Nhân viên rất chuyên nghiệp và tận tâm."
+                </p>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center text-white font-bold mr-4">
+                        LM
+                    </div>
+                    <div>
+                        <h4 class="font-bold">Lê Minh</h4>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-300">
+                    "Tôi rất ấn tượng với dịch vụ của FreshKicks. Giày của tôi bị ố vàng
+                    đã được làm sạch hoàn toàn. Sẽ quay lại!"
+                </p>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center text-white font-bold mr-4">
+                        PH
+                    </div>
+                    <div>
+                        <h4 class="font-bold">Phạm Hương</h4>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-300">
+                    "Dịch vụ nhanh chóng và chất lượng. Giày của tôi không chỉ sạch mà còn
+                    có mùi thơm rất dễ chịu. Cảm ơn FreshKicks!"
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-black">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80"
+                     alt="About FreshKicks"
+                     class="rounded-xl shadow-2xl w-full max-w-md border border-gray-700">
+            </div>
+            <div class="md:w-1/2 md:pl-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Về chúng tôi</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyan-500 to-purple-600 mb-6"></div>
+                <p class="text-gray-300 mb-6">
+                    FreshKicks được thành lập với sứ mệnh mang lại vẻ đẹp nguyên bản cho đôi giày của bạn.
+                    Chúng tôi hiểu rằng giày không chỉ là phụ kiện mà còn là niềm đam mê, là biểu tượng cá tính.
+                </p>
+                <p class="text-gray-300 mb-8">
+                    Với đội ngũ chuyên gia giàu kinh nghiệm và hệ thống máy móc hiện đại,
+                    chúng tôi cam kết mang đến dịch vụ làm sạch giày tốt nhất trên thị trường.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-check text-white"></i>
+                        </div>
+                        <span class="font-medium">Chuyên nghiệp</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-check text-white"></i>
+                        </div>
+                        <span class="font-medium">Chất lượng</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-check text-white"></i>
+                        </div>
+                        <span class="font-medium">Uy tín</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-cyan-400 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-check text-white"></i>
+                        </div>
+                        <span class="font-medium">Nhanh chóng</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Liên hệ với chúng tôi</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-cyan-500 to-purple-600 mx-auto mb-6"></div>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                Hãy để lại thông tin, chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất
+            </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2 mb-12 md:mb-0 md:pr-8">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-300 mb-2">Họ và tên</label>
+                        <input type="text" id="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-300 mb-2">Email</label>
+                        <input type="email" id="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-gray-300 mb-2">Số điện thoại</label>
+                        <input type="tel" id="phone" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-300 mb-2">Lời nhắn</label>
+                        <textarea id="message" rows="4" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500"></textarea>
+                    </div>
+                    <button type="submit" class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition-all w-full">
+                        Gửi liên hệ
+                    </button>
+                </form>
+            </div>
+
+            <div class="md:w-1/2 md:pl-8">
+                <div class="bg-gray-800 rounded-xl p-8 border border-gray-700 h-full">
+                    <h3 class="text-2xl font-bold mb-6">Thông tin liên hệ</h3>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Địa chỉ</h4>
+                                <p class="text-gray-300">123 Đường ABC, Phường XYZ, Quận 1, TP.HCM</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Điện thoại</h4>
+                                <p class="text-gray-300">0901 234 567</p>
+                                <p class="text-gray-300">028 1234 5678</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email</h4>
+                                <p class="text-gray-300">info@freshkicks.vn</p>
+                                <p class="text-gray-300">support@freshkicks.vn</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-cyan-400 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Giờ làm việc</h4>
+                                <p class="text-gray-300">Thứ 2 - Thứ 6: 8:00 - 18:00</p>
+                                <p class="text-gray-300">Thứ 7: 8:00 - 12:00</p>
+                                <p class="text-gray-300">Chủ nhật: Nghỉ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Theo dõi chúng tôi</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-cyan-500 transition-all">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-purple-500 transition-all">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-400 transition-all">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-red-500 transition-all">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black py-12 border-t border-gray-800">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-6 md:mb-0">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+                <span class="logo-text text-xl ml-3 gradient-text">FreshKicks</span>
+            </div>
+
+            <div class="text-center md:text-right">
+                <p class="text-gray-400 mb-2">© 2023 FreshKicks. All rights reserved.</p>
+                <div class="flex justify-center md:justify-end space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-all">Chính sách bảo mật</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-all">Điều khoản dịch vụ</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-all">FAQs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
