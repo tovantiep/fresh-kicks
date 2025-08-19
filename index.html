@@ -37,6 +37,10 @@
         .transition-all {
             transition: all 0.3s ease;
         }
+
+        .banner-slide {
+            transition: opacity 1s ease-in-out;
+        }
     </style>
 </head>
 <body class="bg-black text-white">
@@ -105,11 +109,13 @@
                 </div>
             </div>
             <div class="md:w-1/2 flex justify-center">
-                <div class="relative">
-                    <div class="w-80 h-80 md:w-96 md:h-96 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full opacity-20 absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-                    <img src="https://images.unsplash.com/photo-1600269452121-1f82294359ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                         alt="Shoe cleaning service"
-                         class="rounded-xl shadow-2xl w-full max-w-md border border-gray-700">
+                <div class="relative flex justify-center">
+                    <div class="w-80 h-80 md:w-96 md:h-96 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full opacity-20 absolute z-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                    <div class="relative z-10 w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-cyan-400 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80"
+                             alt="Shoe cleaning service"
+                             class="w-full h-full object-cover">
+                    </div>
                 </div>
             </div>
         </div>
